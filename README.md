@@ -1,54 +1,46 @@
-# React + TypeScript + Vite
+# Search GIF App 🎉
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación de búsqueda de GIFs construida con React, TypeScript y Tailwind CSS. Utiliza la API de Giphy para permitir a los usuarios buscar y visualizar GIFs tanto por categorías como por términos de búsqueda personalizados. Además, muestra los GIFs más populares (Trending) por defecto. 🌟
 
-Currently, two official plugins are available:
+## Características 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Búsqueda de GIFs**: Permite buscar GIFs por categorías o por términos personalizados. 🔍
+- **Trending GIFs**: Muestra los GIFs más populares en tiempo real, utilizando la API de Giphy. 🔥
+- **Interfaz Responsiva**: La interfaz se adapta a diferentes tamaños de pantalla para una mejor experiencia de usuario. 📱💻
+- **Patrón de Diseño Atomic Design**: El proyecto sigue el patrón de diseño **Atomic Design**, dividiendo la UI en componentes reutilizables y modulares (Átomos, Moléculas, Organismos y Plantillas). 🧩
 
-## Expanding the ESLint configuration
+## Tecnologías utilizadas 💻
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: Biblioteca principal para construir la interfaz de usuario. ⚛️
+- **TypeScript**: Lenguaje utilizado para el desarrollo, proporcionando tipado estático. 📝
+- **Tailwind CSS**: Framework de CSS para diseñar la interfaz de usuario. 🌈
+- **Giphy API**: API utilizada para obtener los GIFs. 🖼️
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Instalación y Ejecución 🔧
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clona el repositorio:
+   - `git clone https://github.com/tu-usuario/tu-repositorio.git`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Entra en el directorio del proyecto:
+   - `cd tu-repositorio`
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. Instala las dependencias del proyecto:
+   - `npm install`
+
+4. Ejecuta la aplicación en modo desarrollo:
+   - `npm start`
+
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000). 🌐
+
+## Estructura del Proyecto 🏗️
+
+El proyecto sigue el patrón de diseño **Atomic Design**, que organiza los componentes en diferentes niveles:
+
+- **Átomos**: Los componentes más pequeños y reutilizables, como botones, imágenes y entradas. 🔘
+- **Moléculas**: Combinaciones de átomos que forman unidades funcionales, como el formulario de búsqueda. 🧬
+- **Organismos**: Secciones completas de la interfaz que contienen varias moléculas, como la barra de navegación. 🌿
+- **Plantillas**: Estructuras de la página que definen la disposición general de los componentes. 📝
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia MIT. 🆓
