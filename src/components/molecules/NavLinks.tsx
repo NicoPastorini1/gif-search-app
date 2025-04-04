@@ -17,8 +17,8 @@ const NavLinks = ({ onCategoryChange }: NavLinksProps) => {
             href={link.href}
             className="text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
             onClick={(e) => {
-              e.preventDefault();  // Prevenir el comportamiento por defecto del enlace
-              onCategoryChange(link.category);  // Actualiza la categoría cuando se hace clic
+              e.preventDefault(); 
+              onCategoryChange(link.category);
             }}
           >
             {link.name}

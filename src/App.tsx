@@ -1,20 +1,23 @@
 import { useState } from "react";
-import GifGrid from "./components/organisms/GifGrid";
 import Navbar from "./components/organisms/Navbar";
+import GifGrid from "./components/organisms/GifGrid";
 
-function App() {
-  const [category, setCategory] = useState("trending"); 
+const App = () => {
+  const [category, setCategory] = useState("trending");
 
-  const handleCategoryChange = (category: string) => {
-    setCategory(category);
+  const handleCategoryChange = (newCategory: string) => {
+    setCategory(newCategory || "trending");
   };
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
       <Navbar onCategoryChange={handleCategoryChange} />
-      <GifGrid category={category} />
-    </>
+
+      <main className="p-4">
+        <GifGrid category={category} />
+      </main>
+    </div>
   );
-}
+};
 
 export default App;
